@@ -1,0 +1,49 @@
+{{ define "main" }}
+{{ partial "back_link.html" .}}
+
+<article class="h-entry prose prose-gray dark:prose-invert mb-14">
+    <header class="mb-20 text-center">
+        <h2 class="text-7xl">{{ .Title }}</h2>
+        <p class="text-xl mt-5">{{ .Description }}</p>
+    </header>
+
+    <div class="e-content">
+        {{ .Content }}
+    </div>
+  </article>
+
+    <section>
+      <div class="text-center">
+        <h3 class="text-3xl font-semibold">Good to know</h3>
+      </div> 
+
+      <div class="flex mt-14">
+        <div class="flex-none w-52 pr-5">
+          <img src="https://images.unsplash.com/photo-1461280360983-bd93eaa5051b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="" alt="">
+        </div> 
+        <div class="grow prose dark:prose-invert">
+          <p><strong>Our services are in English.</strong> Many of us are expats, and because of that, English is the main language we use. We do like to sprinkle in other languages as well, which you'll see in our liturgy and choice of music.</p>
+        </div>
+      </div>
+
+      <div class="flex mt-14">
+        <div class="grow prose dark:prose-invert">
+          <p><strong>Bring your kid(s)!</strong> We gladly bring our own children to gatherings (yes, even Bible study), and want them to have a fun, warm, and meaningful experience. We alternative child-friendly services with separate children's activities.</p>
+        </div>
+        <div class="flex-none w-52 pl-5">
+          <img src="https://images.unsplash.com/flagged/photo-1567116681178-c326fa4e2c8b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNodXJjaCUyMHBlb3BsZXxlbnwwfHwwfHx8Mg%3D%3D" class="" alt="">
+        </div> 
+      </div>
+
+      <div class="flex mt-14">
+        <div class="flex-none w-52 pr-5">
+          <img src="https://images.unsplash.com/flagged/photo-1567116681178-c326fa4e2c8b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNodXJjaCUyMHBlb3BsZXxlbnwwfHwwfHx8Mg%3D%3D" class="" alt="">
+        </div> 
+        <div class="grow prose dark:prose-invert">
+          <p><strong>Our services are in English.</strong> Our community was founded with hopes of being a welcoming place to expats in and around Amsterdam. When you join us, please know that English is the main language we use. We do like to sprinkle in other languages as well.</p>
+        </div>
+      </div>
+    </section>
+
+    {{ partial "backlinks.html" . }} 
+{{ end }}

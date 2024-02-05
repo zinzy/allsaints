@@ -1,0 +1,31 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {{ if .IsPage }} <meta name="description" content="{{ .Summary }}">  {{ end }}
+
+  <title>
+    {{ if not .IsHome }}
+      {{ .Title }}
+    {{ else }}
+      {{ $.Site.Title }}
+    {{ end }}
+  </title>
+
+  <link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml"  title="{{ .Site.Title }}">
+
+  <link rel="icon" type="image/svg+xml" href="https://emojicdn.elk.sh/👋🏽">
+  <!-- 
+  {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
+  {{ $sass := resources.Get "css/main.scss" }}
+  {{ $style := $sass | resources.ToCSS $options | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}" /> -->
+
+  <link rel="stylesheet" href="/src/output.css">
+
+
+  <!-- <script type="text/javascript" src="/assets/js/site.js"></script> -->
+
+  {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
+</head>
+

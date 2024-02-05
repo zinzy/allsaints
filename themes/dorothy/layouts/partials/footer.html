@@ -1,0 +1,40 @@
+<footer class="text-sm text-gray-500 dark:text-white/60 text-center mt-32 mb-14">
+  <p>Thank you for stopping by.</p>
+</footer>
+
+
+  <script>
+    // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
+    // When the user scrolls down 50px from the top of the document, resize the header's font size
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("logo").style.width = "30px";
+      } else {
+        document.getElementById("logo").style.width = "90px";
+      }
+    }
+
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>

@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ partial "back_link.html" .}}
+
+<article class="h-entry prose prose-gray dark:prose-invert">
+    <header class="p-name mb-14">
+        <h2 class="p-name">{{ .Title }}</h2>
+    </header>
+
+    {{ if .Params.toc }}
+        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
+            {{ .TableOfContents }}
+        </aside>
+    {{ end }}
+ 
+    <div class="e-content">
+        <!-- https://github.com/gohugoio/hugo/issues/3606#issuecomment-634092082 -->
+        <!-- {{ .Content | replaceRE "\\[\\[([^/]+)\\]\\]" "<a href=\"${1}.html\">$1</a>" |safeHTML }}  -->
+
+        {{- partial "content_wikified" . -}}
+    </div> 
+</article>
+{{ end }}
+ 
