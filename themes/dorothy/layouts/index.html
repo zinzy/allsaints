@@ -1,12 +1,19 @@
 {{ define "main" }}
 
+
+
+
 <section class="text-center mb-20">
     <h2 class="text-4xl font-semibold">
         All Saints.<br class="hidden md:block"/> 
         First and Third Sunday.<br class="hidden md:block"/> 
         Six o'clock.
     </h2>
-    <p class="text-gray-600 mt-7 mb-0 text-lg md:w-11/12 md:mx-auto">We are in Amsterdam building an inclusive, intersectional, queer-friendly, trauma-informed, anti-racist community of Jesus followers. You should join us.</p>
+    <div class="text-gray-600 mt-7 mb-0 text-lg md:w-11/12 md:mx-auto">
+        <p class="mb-2">We are in Amsterdam building an inclusive, intersectional, queer-friendly, trauma-informed, anti-racist Christian fellowship.</p>
+        <p class="">We're a community of people who like Jesus but who are not so sure about everything that came after. You should join us.</p>
+    </div> 
+
 
     <div class="mt-14 flex justify-center gap-4">
         <a href="/" class="px-3 py-2  bg-red-50 rounded font-semibold">Learn about us</a>
@@ -15,24 +22,61 @@
 </section>
 
 <section class="mb-20">
-    <img src="https://assets.kro-ncrv.nl/public/styles/image_md/public/media/images/ANP-346894440.jpg?itok=lvdzt62k" class="rounded-xl overlayedimage" alt="">
+    <img src="https://images.unsplash.com/photo-1530046653187-118937de7646?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-xl" alt="">
 </section>
 
 <section class="mb-20">
     <h3 class="text-3xl font-semibold text-center md:w-11/12 md:mx-auto">
-        Our priests <a href="/mpho" class="underline">Mpho</a> and <a href="/kyle" class="underline">Kyle</a> are helping us figure out what it means to walk the talk of the message of Jesus.
+        Our priests <a href="/mpho" class="underline">Mpho</a> and <a href="/kyle" class="underline">Kyle</a> are helping us figure out what it means to walk the talk of Jesus.
     </h3> 
 </section>
 
-<section class="bg-red-50 rounded-3xl p-7" id="service"> 
-    <p class="text-gray-500 text-lg m-0 p-0">Our next service is on</p>
-    <div class="mt-5 mb-10">
-        <h3 class="text-3xl my-2 font-medium">Sunday, February 4, 2023, <span class="text-gray-500">18:00</span></h3>
-        <p class="text-gray-600 text-lg">After service, you’re invited to linger longer at our simple potluck supper in the church hall. As you are able, bring a dish or a drink to share.</p>
-    </div>
-    <a href="/#visit" class="rounded-3xl bg-pink-500 uppercase font-medium tracking-wider text-white visited:text-white py-3 px-5 mt-5">
-        Plan your visit
-    </a>
+<section class="mb-20">
+    <img src="https://images.unsplash.com/photo-1519671282429-b44660ead0a7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-xl" alt="">
 </section>
+
+<section class="mb-10">
+    <h3 class="text-3xl font-semibold text-center md:w-11/12 md:mx-auto">Come join us</h3> 
+</section>
+
+<section class="mb-20">
+    <div class="flex gap-4">
+        <div class="bg-red-50 rounded-xl p-5 w-full text-center"> 
+            <h4 class="text-xl m-0 p-0 font-medium">Bible study <span class="text-gray-300">/</span> Prayer Lab</h4>
+            <p class="text-gray-500 mb-5">Wednesday, Feb 21 @ 18:30</p> 
+            <p>We ponder over Scripture, exchanging perspectives and lived experiences, and explore prayer techniques, always over a vegetarian potluck dinner.</p>
+        </div> 
+        <div class="bg-red-50 rounded-xl p-5 w-full text-center">
+            <h4 class="text-xl m-0 p-0 font-medium">Sunday Service</h4>
+            <p class="text-gray-500 mb-5">Sunday, Feb 18 @ 18:00</p>
+            <p>We draw on a range of modern and ancient liturgies and music, finding in them ways to celebrate, learn, wonder, doubt, change, and recharge. </p>
+        </div> 
+    </div>
+</section>
+
+<section class="mb-20">
+    <div class="rounded-3xl border-slate-200 p-7 md:p-10 md:flex place-content-between">
+        <div class="">
+            <h3 class="text-2xl">Want to stay in touch?<br>Sign up for our newsletter.</h3>
+        </div>
+        <div class="mt-10 md:mt-0">
+            
+            
+
+<form action="https://buttondown.email/api/emails/embed-subscribe/allsaintsamsterdam" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/allsaintsamsterdam', 'popupwindow')" class="embeddable-buttondown-form">
+<div class="">
+<label for="search-dropdown" class="sr-only bd-email">Your Email</label>
+<div class="flex bg-white rounded-full">
+<input type="email" name="email" class="grow items-stretch px-5 md:px-10 rounded-full bd-email" placeholder="Your email address" required="">
+<button value="Subscribe" type="submit" class="flex-none h-14 w-14 rounded-full bg-pink-500 border-none flex justify-center place-items-center">
+<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="white" d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"></path></svg>
+</button>
+</div>
+</div>
+</form>
+        </div>
+    </div>
+</section>
+
 
 {{ end }}  
