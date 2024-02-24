@@ -16,18 +16,7 @@ refLinksNotFoundURL = "/wiki"
 [taxonomies]
   category = 'categories'
   tag = 'tags'
-
-[params]
-  subtitle = 'A warm welcome'
-  [params.author]
-    givenName = 'Zinzy'
-    familyName = 'Waleson Geene'
-    ethnicity = 'Afropean'
-    genderIdentity = 'queer'
-    locality = 'Amsterdam'
-    country = 'The Netherlands'
-    jobTitle = 'Senior UX practitioner'
-    org = 'Gerimedica'
+  
 [permalinks]
   posts = "/:year/:month/:day/:title/"
   updates = "/:filename/"
@@ -36,51 +25,3 @@ refLinksNotFoundURL = "/wiki"
 [outputs]
   home = ['html', 'rss']
   section = ['html', 'rss']
-paginate = 6
-
-[[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 2
-[[menu.main]]
-  name = "Now"
-  url = "/now/"
-  weight = 3
-[[menu.main]]
-  name = "Interests"
-  url = "/interests/"
-  weight = 4
-[[menu.main]]
-  name = "Work"
-  url = "/work/"
-  weight = 5
-[[menu.main]]
-  name = "Posts"
-  url = "/posts/"
-  weight = 6
-[[menu.main]]
-  name = "Updates"
-  url = "/updates/"
-  weight = 7
-[[menu.main]]
-  name = "Site"
-  url = "/site/"
-  weight = 8
-[[menu.main]]
-  name = "Bookmarks"
-  url = "/bookmarks/"
-  weight = 9
-[[menu.main]]
-  name = "Codex"
-  url = "/codex/"
-  weight = 10
-[[menu.main]]
-  name = "Follow"
-  url = "/follow/"
-  weight = 11
-[[menu.main]]
-  name = "Hello"
-  url = "/hello/"
-  weight = 12
-
-   
