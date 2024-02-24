@@ -5,13 +5,13 @@
  
             
 
-        <main class="page-content mx-auto p-8 lg:pt-32" aria-label="Content">
+        <main class="page-content mx-auto p-8 md:py-32" aria-label="Content">
             {{- partial "header.html" . -}} 
             <div class="my-32">
                 {{- block "main" . }}{{- end }}
             </div>
+            {{- partial "footer.html" . -}}
         </main>
-
-    {{- partial "footer.html" . -}}
+ 
     </body>
 </html>

@@ -1199,6 +1199,10 @@ video {
   margin-top: 1.75rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -1715,6 +1719,11 @@ nav ul li:not(:last-child):after {
 }
 
 @media (min-width: 768px) {
+  .md\:my-32 {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -1734,6 +1743,15 @@ nav ul li:not(:last-child):after {
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .md\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .md\:pt-32 {
+    padding-top: 8rem;
   }
 }
 
