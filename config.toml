@@ -1,4 +1,4 @@
-baseURL = "https://allsaintsamsterdam.church"
+baseURL = "/"
 languageCode = "en-us"
 title = "All Saints Amsterdam"
 theme = "dorothy"
