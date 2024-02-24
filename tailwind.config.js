@@ -11,10 +11,10 @@ module.exports = {
       typography: ({ theme }) => ({ 
         default: {
           css: {
-            color: theme('colors.slate'),
+            color: theme('colors.gray'),
           }
         },
-        slate: {
+        gray: {
           css: { 
             'img': {
               borderRadius: '10px'
@@ -31,24 +31,24 @@ module.exports = {
               // textTransform: 'uppercase',
             }
             ,
-            '--tw-prose-body': theme('colors.slate[600]'),
-            '--tw-prose-headings': theme('colors.slate[800]'),
-            '--tw-prose-lead': theme('colors.slate[800]'),
-            '--tw-prose-links': theme('colors.slate[800]'),
-            '--tw-prose-bold': theme('colors.slate[800]'),
-            '--tw-prose-counters': theme('colors.slate[800]'),
-            '--tw-prose-bullets': theme('colors.slate[800]'),
-            '--tw-prose-hr': theme('colors.slate[200]'),
-            '--tw-prose-quotes': theme('colors.slate[600]'),
-            '--tw-prose-quote-borders': theme('colors.slate[200]'),
-            '--tw-prose-captions': theme('colors.slate[800]'),
-            '--tw-prose-code': theme('colors.slate[800]'),
-            '--tw-prose-pre-code': theme('colors.slate[800]'),
-            '--tw-prose-pre-bg': theme('colors.slate[800]'),
-            '--tw-prose-th-borders': theme('colors.slate[200]'),
-            '--tw-prose-td-borders': theme('colors.slate[200]'),
+            '--tw-prose-body': theme('colors.gray[600]'),
+            '--tw-prose-headings': theme('colors.gray[800]'),
+            '--tw-prose-lead': theme('colors.gray[800]'),
+            '--tw-prose-links': theme('colors.gray[800]'),
+            '--tw-prose-bold': theme('colors.gray[800]'),
+            '--tw-prose-counters': theme('colors.gray[800]'),
+            '--tw-prose-bullets': theme('colors.gray[800]'),
+            '--tw-prose-hr': theme('colors.gray[200]'),
+            '--tw-prose-quotes': theme('colors.gray[600]'),
+            '--tw-prose-quote-borders': theme('colors.gray[200]'),
+            '--tw-prose-captions': theme('colors.gray[800]'),
+            '--tw-prose-code': theme('colors.gray[800]'),
+            '--tw-prose-pre-code': theme('colors.gray[800]'),
+            '--tw-prose-pre-bg': theme('colors.gray[800]'),
+            '--tw-prose-th-borders': theme('colors.gray[200]'),
+            '--tw-prose-td-borders': theme('colors.gray[200]'),
             // Everything below will be dark mode
-            '--tw-prose-invert-body': theme('colors.slate[300]'),
+            '--tw-prose-invert-body': theme('colors.gray[400]'),
             '--tw-prose-invert-headings': theme('colors.white'),
             '--tw-prose-invert-lead': theme('colors.zinc[300]'),
             '--tw-prose-invert-links': theme('colors.white'),

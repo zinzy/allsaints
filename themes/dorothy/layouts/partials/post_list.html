@@ -1,7 +1,7 @@
 {{- $posts := "" -}}
 
 {{- if .section -}}
-    {{- $posts = (where site.RegularPages "Section" "posts") -}}
+    {{- $posts = (where site.RegularPages "Section" .section) -}}
 {{- else -}}
     {{- if (eq .context.Kind "taxonomy") -}}
         {{- $posts = .context.Pages -}}

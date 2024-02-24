@@ -5,34 +5,36 @@
     <header class="mb-20">
         <h2 class="p-name mb-2">{{ .Title }}</h2>
         <div class="">
-            <time class="dt-published inline-block" datetime="{{ .Date }}">
-                {{ .Date | time.Format site.Params.theme_config.date_format_archive }}
-            </time>
-            <span class="inline-block mx-2">|</span>
-            {{ partial "tags.html" .}}
+
+            <p class="text-gray-500 dark:text-gray-400 mt-0">
+                <time class="dt-published">
+                    {{- (.Date | time.Format site.Params.theme_config.date_format_archive) }}
+                </time> @ 
+                {{ if eq .Params.eventType "eucharist" }}18:00{{ end }}
+                {{ if eq .Params.eventType "bibleStudy" }}18:30{{ end }}
+                {{ if eq .Params.eventType "prayerLab" }}18:30{{ end }}
+            </p> 
         </div> 
     </header> 
 
-    <div class="my-5">
-        {{ if .Params.toc }}
-        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
-            {{ .TableOfContents }}
-        </aside>
-    {{ end }}
-    </div>
-
     <content class="e-content">
-        {{- partial "content_wikified" . -}}
+        <p>
+            <em>
+                {{ if eq .Params.eventType "eucharist" }}On each first and third Sunday of the month, we come together at 18:00 for service, breaking (gluten-free) bread together, listening to Scripture and song, and contemplating with the help of our priests. We welcome devices for those who don't mind a paperless service.{{ end }}
+                {{ if eq .Params.eventType "bibleStudy" }}Every other Thursday evening, Mpho leads us in Bible study, which follows the <a href="https://lectionarypage.net/" target="_blank" rel="noopener noreferrer">Episcopal liturgical calendar</a>.{{ end }}
+                {{ if eq .Params.eventType "prayerLab" }}Every other Thursday evening, Kyle welcomes us at Prayer Lab, which aims to help us explore a wide variety of prayer methods.{{ end }}
+            </em>
+        </p>
+        {{ with .Content }}
+            {{- . -}}
+            {{else}}
+                <p>
+                    {{ if eq .Params.eventType "eucharist" }}Check back on the day of service for a digital version of our bulletin.{{ end }}
+                    {{ if eq .Params.eventType "bibleStudy" }}Check back on the day of the event for Scripture and any other resources we may be using that day.{{ end }}
+                    {{ if eq .Params.eventType "prayerLab" }}Check back on the day of the event for resources we may be using that day.{{ end }}
+                </p>
+        {{ end }}
     </content>
-
-    
-
-
-    
-
-    {{ partial "backlinks.html" . }}
-
-
 
 </article>
 {{ end }}

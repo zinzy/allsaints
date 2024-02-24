@@ -4,12 +4,12 @@
 
 
 <section class="mb-20">
-    <h2 class="text-4xl font-medium">
+    <h2 class="text-4xl font-medium dark:text-white">
         All Saints.<br/> 
         First and Third Sunday.<br/> 
         Six o'clock.
     </h2>
-    <div class="text-gray-600 mt-7 mb-0 text-lg">
+    <div class="text-gray-600 dark:text-gray-400 mt-7 mb-0 text-lg">
         <p class="mb-2">We are in Amsterdam building an inclusive, intersectional, queer-friendly, trauma-informed, anti-racist Christian fellowship.</p>
         <p class="">We're a community of people who like Jesus but who are not so sure about everything that came after. You should join us.</p>
     </div> 
@@ -23,13 +23,13 @@
 
 <section class="mb-20"> 
     <div class="mb-10">
-        <h2 class="text-3xl font-medium mb-2">Next up:</h2>
+        <h2 class="text-3xl font-medium mb-2 dark:text-white">Next up:</h2>
     </div>
     {{ $events := where .Site.RegularPages "Section" "events" }}
 
 <ul>
     {{ range (where .Site.RegularPages "Section" "events").Reverse }}
-    <li class="block mb-5 p-5 bg-red-50 rounded"> 
+    <li class="block mb-5 p-5 bg-red-50 dark:bg-gray-800 rounded"> 
         <div class="flex">
             <div class="flex-none w-14 text-3xl">
                 {{ if eq .Params.eventType "eucharist" }}⛪️{{ end }}
@@ -37,24 +37,26 @@
                 {{ if eq .Params.eventType "prayerLab" }}🙏🏽{{ end }}
             </div>
             <div class="grow">
-                <div class="flex">
-                    <div class="grow"><h4 class="text-2xl m-0 p-0 font-medium">
+                <div class="flex mb-3">
+                    <div class="grow">
+                        <h4 class="dark:text-white text-2xl m-0 p-0 font-medium">
                         <a class="" href="{{ .Permalink }}">{{ .Title }}</a>
-                    </h4></div>
+                        </h4>
+                        <p class="text-gray-500 dark:text-gray-400">
+                            <time class="">
+                                {{- (.Date | time.Format site.Params.theme_config.date_format_archive) }}
+                            </time> @ 
+                            {{ if eq .Params.eventType "eucharist" }}18:00{{ end }}
+                            {{ if eq .Params.eventType "bibleStudy" }}18:30{{ end }}
+                            {{ if eq .Params.eventType "prayerLab" }}18:30{{ end }}
+                        </p> 
+                    </div>
                     <div class="flex-none">
-                        <a href="{{ .Permalink }}" class="text-red-600 border p-3 hover:bg-red-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                        <a class="w-14 h-14 bg-red-100 dark:bg-gray-900 rounded place-content-center grid" href="{{ .Permalink }}">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-pink-500 dark:fill-white" height="24" viewBox="0 -960 960 960" width="24"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
                         </a>
                     </div> 
-                </div>
-                <p class="text-gray-500 mb-3">
-                    <time class=" text-gray-500 dark:text-white dark:text-opacity-50">
-                        {{- (.Date | time.Format site.Params.theme_config.date_format_archive) }}
-                    </time> @ 
-                    {{ if eq .Params.eventType "eucharist" }}18:00{{ end }}
-                    {{ if eq .Params.eventType "bibleStudy" }}18:30{{ end }}
-                    {{ if eq .Params.eventType "prayerLab" }}18:30{{ end }}
-                </p> 
+                </div> 
                 <p class="text-sm">
                     {{ if eq .Params.eventType "eucharist" }}We draw on a range of modern and ancient liturgies and music, finding in them ways to celebrate, learn, wonder, doubt, change, and recharge.{{ end }}
                     {{ if eq .Params.eventType "bibleStudy" }}We ponder over Scripture, exchanging perspectives and lived experiences, and looking for different angles.{{ end }}
@@ -67,9 +69,9 @@
     {{ end }} 
 </ul>
 
-<div class="flex text-xl font-medium mt-20"> 
+<div class="flex text-xl font-medium mt-20 dark:text-white"> 
     <div class="grow">
-        <p><mark class="bg-yellow-200 px-2">Good to know</mark> Whenever we meet, there's a potluck. You're invite to bring your favorite dish or snack. We like to keep things meat-free, dairy-optional, and nut-maybe.</p>
+        <p><mark class="bg-yellow-200 dark:bg-gray-600 dark:text-white px-2 py-1 rounded">Good to know</mark> Whenever we meet, there's a potluck. You're invite to bring your favorite dish or snack. We like to keep things meat-free, dairy-optional, and nut-maybe.</p>
     </div>
     <div class="flex-none w-24  text-right text-4xl">🥙</div>
 </div>
@@ -79,7 +81,7 @@
 <hr>
 
 <section id="about" class="mt-20 mb-20">
-    <h3 class="text-3xl font-medium md:w-11/12">
+    <h3 class="text-3xl font-medium md:w-11/12 dark:text-white">
         Our priests Mpho and Kyle are helping us figure out what it means to walk the talk of Jesus.
     </h3> 
 </section>
@@ -98,46 +100,57 @@
  
 
 <section id="about" class="mb-20">
-    <div class="text-gray-600 mt-7 mb-0 text-lg prose dark:prose-invert">
+    <div class="text-gray-600 dark:text-gray-400 mt-7 mb-0 text-lg prose dark:prose-invert">
         <p >We believe there's a place in the story of Christianity for our busy, modern, not-so-sure-about-it-all lives. Since late 2023, we've been gathering in Amsterdam to explore what it means for us to come together in the name of Jesus, and bring our whole selves when we do.</p>
         <p class="">At All Saints, each of us is finding a place to show up with whatever we have today, whether that be stories of hardship or stories of pure joy. We find inspiration, consolation, and pushback in rite and in Scripture.</p>
         <p>We wholeheartedly believe that life doesn't stop when we walk into church, and that the church isn't the only place where we practice our faith. Politics, lived experiences, allyship, and current events easily find their way into our conversations. Working through them together is how we remind ourselves we're not alone.</p>
     </div> 
 </section>
 
-<section class="mb-20">
-    <img src="https://images.unsplash.com/photo-1519671282429-b44660ead0a7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-xl" alt="">
-</section>
+<hr class="my-20">
 
 <section class="mb-20">
-    <h3 class="text-3xl font-medium mb-2">Good to know</h3> 
-    <div class=" text-gray-600 text-lg">
-        <ul>
+    <h3 class="text-3xl font-medium mb-2 dark:text-white">Good to know</h3> 
+    <div class=" text-gray-600 dark:text-gray-400 text-lg">
+        <ul class="space-y-5 mt-10">
+            
             <li class="flex gap-4">
-                <span class="flex-none w-30 h-30 bg-purple-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
+                <span class="flex-none w-20 h-20 grid place-content-center rounded bg-red-50 dark:bg-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-gray-950 dark:fill-white" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
                 </span>
-                <span class="grow">Our services are in English</span>
+                <span class="grow grid content-center">
+                    <span class="block text-gray-950 dark:text-white font-medium">Our services are in English</span>
+                    <span class="text-base">Although we like to sprinkle in other languages as well</span>
+                </span>
             </li>
+
             <li class="flex gap-4">
-                <span class="flex-none w-30 h-30 bg-red-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-880q50 0 85 35t35 85q0 50-35 85t-85 35q-50 0-85-35t-35-85q0-50 35-85t85-35Zm0 280q47 0 93 11t83 31q38 19 61 45t23 57v232q0 17-8 33.5T710-160q-14 14-32.5 26T636-112v-90q0-38-52.5-62T480-288q-50 0-96.5 20.5T326-214q38 15 78 21t82 7h34v104q-7 2-14.5 2H490q-36 0-82.5-8T319-113q-42-17-70.5-44.5T220-224v-232q0-31 23-57t60-45q38-20 84-31t93-11Zm0 240q33 0 56.5-23.5T560-440q0-33-23.5-56.5T480-520q-33 0-56.5 23.5T400-440q0 33 23.5 56.5T480-360Z"/></svg>
+                <span class="flex-none  w-20 h-20 grid place-content-center rounded bg-red-50 dark:bg-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-gray-950 dark:fill-white" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-880q50 0 85 35t35 85q0 50-35 85t-85 35q-50 0-85-35t-35-85q0-50 35-85t85-35Zm0 280q47 0 93 11t83 31q38 19 61 45t23 57v232q0 17-8 33.5T710-160q-14 14-32.5 26T636-112v-90q0-38-52.5-62T480-288q-50 0-96.5 20.5T326-214q38 15 78 21t82 7h34v104q-7 2-14.5 2H490q-36 0-82.5-8T319-113q-42-17-70.5-44.5T220-224v-232q0-31 23-57t60-45q38-20 84-31t93-11Zm0 240q33 0 56.5-23.5T560-440q0-33-23.5-56.5T480-520q-33 0-56.5 23.5T400-440q0 33 23.5 56.5T480-360Z"/></svg>
                 </span>
-                <span class="grow">You are most welcome to bring your children</span>
+                <span class="grow grid content-center">
+                    <span class="block text-gray-950 dark:text-white font-medium">Children are welcome</span>
+                    <span class="text-base">No need to call your babysitter, let your kid(s) join ours! We alternate child-centered services and separate children's activities.</span>
+                </span>
             </li>
+
             <li class="flex gap-4">
-                <span class="flex-none w-30 h-30 bg-red-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM680-80v-200H480q-33 0-56.5-23.5T400-360v-240q0-33 23.5-56.5T480-680q24 0 41.5 10.5T559-636q55 66 99.5 90.5T760-520v80q-53 0-107-23t-93-55v138h120q33 0 56.5 23.5T760-300v220h-80Zm-280 0q-83 0-141.5-58.5T200-280q0-72 45.5-127T360-476v82q-35 14-57.5 44.5T280-280q0 50 35 85t85 35q39 0 69.5-22.5T514-240h82q-14 69-69 114.5T400-80Z"/></svg>
+                <span class="flex-none  w-20 h-20 grid place-content-center rounded bg-red-50 dark:bg-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-gray-950 dark:fill-white" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM680-80v-200H480q-33 0-56.5-23.5T400-360v-240q0-33 23.5-56.5T480-680q24 0 41.5 10.5T559-636q55 66 99.5 90.5T760-520v80q-53 0-107-23t-93-55v138h120q33 0 56.5 23.5T760-300v220h-80Zm-280 0q-83 0-141.5-58.5T200-280q0-72 45.5-127T360-476v82q-35 14-57.5 44.5T280-280q0 50 35 85t85 35q39 0 69.5-22.5T514-240h82q-14 69-69 114.5T400-80Z"/></svg>
                 </span>
-                <span class="grow">We're wheelchair accessible</span>
+                <span class="grow grid content-center">
+                    <span class="block text-gray-950 dark:text-white font-medium">We're wheelchair accessible</span>
+                    <span class="text-base">Our church is equipped with free seating and as well as ramps and an elevator to make sure you can find your way around.</span>
+                </span>
             </li>
+
         </ul>
     </div>
 </section>
 
 <section class="mb-20">
-    <h3 class="text-3xl font-medium mb-2">Come join us</h3> 
-    <div class="prose prose:dark-invert text-gray-600 text-lg">
+    <h3 class="text-3xl font-medium dark:text-white">Come join us</h3> 
+    <div class=" text-gray-600 dark:text-gray-400 text-lg">
         <p>We gather at the beautiful Vrijburg, a church built in the Amsterdam School style in 1933.</p>
     </div>
     <div class="flex gap-6 mt-10">
@@ -145,8 +158,8 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152.33398871396562!2d4.882594944210249!3d52.34604916846938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609f61fc7dbd5%3A0xe73e4138855e04e9!2sVrijburg!5e0!3m2!1sen!2snl!4v1708765293898!5m2!1sen!2snl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div> 
         <div class="w-full">
-            <h4 class="text-2xl font-medium">Make your way to</h4>
-            <address class="not-italic">
+            <h4 class="text-2xl font-medium dark:text-white">Make your way to</h4>
+            <address class="not-italic text-gray-600 dark:text-gray-400">
                 <div><a href="https://maps.app.goo.gl/ZX1NBX6J5Xq3KhM56" target="_blank" rel="noopener noreferrer">Herman Gorterstraat 31</a></div>
                 <div> 1077 WE Amsterdam</div>
             </address>
@@ -154,31 +167,33 @@
     </div> 
 </section>
  
+<hr class="mb-20">
+
+<section class="flex text-xl font-medium mb-20 dark:text-white"> 
+    <div class="grow">
+        <p><mark class="bg-yellow-200 dark:bg-gray-600 dark:text-white px-2 py-1 rounded">Want to speak with us?</mark> Our inbox is open! Get in touch by adding this domain behind info [a].</p>
+    </div>
+    <div class="flex-none w-24  text-right text-4xl rotate-6">📨</div>
+</section>
 
 <section class="mb-20">
-
-
-
-
-    <div class="rounded-3xl border-slate-200 p-7 md:p-10 md:flex place-content-between">
-        <div class="">
-            <h3 class="text-2xl font-medium">Want to stay in touch? Sign up for our newsletter.</h3>
-        </div>
-        <div class="mt-10 md:mt-0">
-            
-            
-
-<form action="https://buttondown.email/api/emails/embed-subscribe/allsaintsamsterdam" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/allsaintsamsterdam', 'popupwindow')" class="embeddable-buttondown-form">
-<div class="">
-<label for="search-dropdown" class="sr-only bd-email">Your Email</label>
-<div class="flex bg-white rounded-full">
-<input type="email" name="email" class="grow items-stretch px-5 md:px-10 rounded-full bd-email" placeholder="Your email address" required="">
-<button value="Subscribe" type="submit" class="flex-none h-14 w-14 rounded-full bg-pink-500 border-none flex justify-center place-items-center">
-<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="white" d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"></path></svg>
-</button>
-</div>
-</div>
-</form>
+    <div class="rounded-xl bg-red-50 dark:bg-gray-800 p-7">
+        <h3 class="text-2xl">
+            <span class="font-medium block md:inline-block dark:text-white">Want to stay in touch?</span>
+            <span class="text-gray-500 dark:text-gray-400">Sign up for our newsletter.</span>
+        </h3>
+        <div class="mt-5">
+            <form action="https://buttondown.email/api/emails/embed-subscribe/allsaintsamsterdam" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/allsaintsamsterdam', 'popupwindow')" class="embeddable-buttondown-form">
+                <div class="">
+                    <label for="search-dropdown" class="sr-only bd-email">Your Email</label>
+                    <div class="flex bg-white dark:bg-gray-900 rounded-full">
+                        <input type="email" name="email" class="dark:bg-transparent grow items-stretch px-5 md:px-10 rounded-full bd-email text-lg" placeholder="Your email address" required="">
+                        <button value="Subscribe" type="submit" class="flex-none h-14 px-5 font-medium text-white text-lg rounded-full bg-pink-500 border-none ">
+                        Send
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </section>

@@ -11,28 +11,9 @@
             <span class="inline-block mx-2">|</span>
             {{ partial "tags.html" .}}
         </div> 
-    </header> 
-
-    <div class="my-5">
-        {{ if .Params.toc }}
-        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
-            {{ .TableOfContents }}
-        </aside>
-    {{ end }}
-    </div>
-
+    </header>  
     <content class="e-content">
-        {{- partial "content_wikified" . -}}
+        {{ .Content }} 
     </content>
-
-    
-
-
-    
-
-    {{ partial "backlinks.html" . }}
-
-
-
 </article>
 {{ end }}

@@ -7,16 +7,9 @@
         <p class="text-xl mt-5">{{ .Description }}</p>
     </header>
 
-    {{ if .Params.toc }}
-        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
-            {{ .TableOfContents }}
-        </aside>
-    {{ end }}
-
     <div class="e-content">
         {{ .Content }}
     </div>
-
-    {{ partial "backlinks.html" . }}
+ 
 </article>
 {{ end }}
