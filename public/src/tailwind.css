@@ -48,17 +48,10 @@ input:checked {
   text-align: center;
   font-size: 10px;
 }
-
-h2, h3, h4, h5, h6,
-.h2, .h3, .h4, .h5, .h6,
+ 
 .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-  font-family: "Sora", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 165%;
+  font-weight: 500;
 }
-
 .prose h2 { margin: 0; }
 .prose h3 { margin-top: 2.5rem; }
 .prose h4 { margin-top: 2rem; }
@@ -173,9 +166,3 @@ nav ul li:not(:last-child):after {
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
-
-
-.trigger-animation:hover > .animation-triggered {
-  scale: 130%;
-  margin-top: 10px;
-}

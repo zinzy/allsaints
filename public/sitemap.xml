@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://allsaintsamsterdam.church/</loc>
+    <loc>/</loc>
   </url><url>
-    <loc>https://allsaintsamsterdam.church/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>https://allsaintsamsterdam.church/kyle/</loc>
+    <loc>/kyle/</loc>
   </url><url>
-    <loc>https://allsaintsamsterdam.church/mpho/</loc>
+    <loc>/mpho/</loc>
   </url><url>
-    <loc>https://allsaintsamsterdam.church/page/</loc>
+    <loc>/page/</loc>
   </url><url>
-    <loc>https://allsaintsamsterdam.church/plan-your-visit/</loc>
+    <loc>/plan-your-visit/</loc>
   </url><url>
-    <loc>https://allsaintsamsterdam.church/tags/</loc>
+    <loc>/tags/</loc>
   </url><url>
-    <loc>https://allsaintsamsterdam.church/vision/</loc>
+    <loc>/vision/</loc>
   </url>
 </urlset>

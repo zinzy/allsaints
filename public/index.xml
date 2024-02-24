@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>All Saints Amsterdam</title>
-    <link>https://allsaintsamsterdam.church/</link>
+    <link>/</link>
     <description>Recent posts on All Saints Amsterdam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://allsaintsamsterdam.church/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
 
     
   </channel>

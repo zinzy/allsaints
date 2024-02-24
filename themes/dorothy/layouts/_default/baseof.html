@@ -2,11 +2,12 @@
 <html lang="{{ $.Site.LanguageCode }}" class="scroll-smooth">
     {{- partial "head.html" . -}}
     <body class="bg-slate-900 antialiased  text-slate-900 bg-white dark:bg-gray-950 dark:text-gray-300" a="{{ $.Site.Params.theme_config.appearance | default "auto" }}">
+ 
+            
 
-        {{- partial "header.html" . -}}
-
-        <main class="page-content mx-auto p-8 lg:pt-60" aria-label="Content">
-            <div class="w">
+        <main class="page-content mx-auto p-8 lg:pt-32" aria-label="Content">
+            {{- partial "header.html" . -}} 
+            <div class="my-32">
                 {{- block "main" . }}{{- end }}
             </div>
         </main>
