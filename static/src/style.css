@@ -1378,6 +1378,10 @@ video {
   fill: #0f172a;
 }
 
+.fill-slate-800 {
+  fill: #1e293b;
+}
+
 .p-0 {
   padding: 0px;
 }
@@ -1484,6 +1488,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-slate-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
 .underline {
