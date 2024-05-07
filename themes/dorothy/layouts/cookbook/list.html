@@ -1,0 +1,21 @@
+{{ define "main" }}
+{{ partial "back_link.html" .}}
+
+<header class="prose mb-20 dark:prose-invert">
+    <h2>Cookbook</h2>
+    <p class="">One of our members like to refer to All Saints as "not your grandmother's potluck", and they're not lying. </p>
+</header>
+ 
+
+ 
+{{ $postsDefault := where .Site.RegularPages "Type" "posts" }}
+
+<ul>
+    {{ range $postsDefault }}
+    <li class="mb-3"> 
+        <a class="border-dashed border-b border-gray-400" href="{{ .Permalink }}">{{ .Title }}</a> - <time class=" text-gray-500 dark:text-white dark:text-opacity-50">{{- (.Date | time.Format site.Params.theme_config.date_format_archive) }}</time>
+    </li>
+    {{ end }} 
+</ul>  
+{{ end }}
+

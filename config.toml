@@ -18,10 +18,10 @@ refLinksNotFoundURL = "/wiki"
   tag = 'tags'
   
 [permalinks]
-  posts = "/:year/:month/:day/:title/"
-  updates = "/:filename/"
+  events = "/:year/:month/:day/:title/"
   page = "/:slug/"
   notes = "/:slug/"
+  cookbook = "/:slug/"
 [outputs]
   home = ['html', 'rss']
   section = ['html', 'rss']

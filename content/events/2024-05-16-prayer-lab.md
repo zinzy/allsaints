@@ -1,5 +1,5 @@
 ---
 title: "Prayer Lab"
-date: 2024-03-07
+date: 2024-05-16
 eventType: prayerLab
 ---

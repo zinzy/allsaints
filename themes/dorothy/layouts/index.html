@@ -19,7 +19,7 @@
     {{ $events := where .Site.RegularPages "Section" "events" }}
 
 <ul>
-    {{ range (where .Site.RegularPages "Section" "events").Reverse }}
+    {{ range first 3 (where .Site.RegularPages "Section" "events").Reverse }}
      
         <a href="{{ .Permalink }}">
             <li class="block mb-5 p-5 bg-red-50 dark:bg-gray-800 rounded hover:scale-105 transition-all">
@@ -39,9 +39,9 @@
                                 <time class="">
                                     {{- (.Date | time.Format site.Params.theme_config.date_format_archive) }}
                                 </time> @ 
-                                {{ if eq .Params.eventType "eucharist" }}18:00{{ end }}
-                                {{ if eq .Params.eventType "bibleStudy" }}18:30{{ end }}
-                                {{ if eq .Params.eventType "prayerLab" }}18:30{{ end }}
+                                {{ if eq .Params.eventType "eucharist" }}17:30{{ end }}
+                                {{ if eq .Params.eventType "bibleStudy" }}18:00{{ end }}
+                                {{ if eq .Params.eventType "prayerLab" }}18:00{{ end }}
                             </p> 
                         </div>
                         <div class="flex-none">

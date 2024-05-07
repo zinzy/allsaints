@@ -10,9 +10,9 @@
                 <time class="dt-published">
                     {{- (.Date | time.Format site.Params.theme_config.date_format_archive) }}
                 </time> @ 
-                {{ if eq .Params.eventType "eucharist" }}18:00{{ end }}
-                {{ if eq .Params.eventType "bibleStudy" }}18:30{{ end }}
-                {{ if eq .Params.eventType "prayerLab" }}18:30{{ end }}
+                {{ if eq .Params.eventType "eucharist" }}17:30{{ end }}
+                {{ if eq .Params.eventType "bibleStudy" }}18:00{{ end }}
+                {{ if eq .Params.eventType "prayerLab" }}18:00{{ end }}
             </p> 
         </div> 
     </header> 
@@ -20,7 +20,7 @@
     <content class="e-content">
         <p>
             <em>
-                {{ if eq .Params.eventType "eucharist" }}On each first and third Sunday of the month, we come together at 18:00 for service, breaking (gluten-free) bread together, listening to Scripture and song, and contemplating with the help of our priests. We welcome devices for those who don't mind a paperless service.{{ end }}
+                {{ if eq .Params.eventType "eucharist" }}On each first and third Sunday of the month, we come together for service, breaking (gluten-free) bread together, listening to Scripture and song, contemplating life and what's keeping us busy. We welcome devices for those who don't mind a paperless service.{{ end }}
                 {{ if eq .Params.eventType "bibleStudy" }}Every other Thursday evening, Mpho leads us in Bible study, which follows the <a href="https://lectionarypage.net/" target="_blank" rel="noopener noreferrer">Episcopal liturgical calendar</a>.{{ end }}
                 {{ if eq .Params.eventType "prayerLab" }}Every other Thursday evening, Kyle welcomes us at Prayer Lab, which aims to help us explore a wide variety of prayer methods.{{ end }}
             </em>
