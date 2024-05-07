@@ -1046,57 +1046,49 @@ video {
   margin-bottom: 0;
 }
 
-.prose-gray {
-  --tw-prose-body: #4b5563;
-  --tw-prose-headings: #1f2937;
-  --tw-prose-lead: #1f2937;
-  --tw-prose-links: #1f2937;
-  --tw-prose-bold: #1f2937;
-  --tw-prose-counters: #1f2937;
-  --tw-prose-bullets: #1f2937;
-  --tw-prose-hr: #e5e7eb;
-  --tw-prose-quotes: #4b5563;
-  --tw-prose-quote-borders: #e5e7eb;
-  --tw-prose-captions: #1f2937;
-  --tw-prose-kbd: #111827;
-  --tw-prose-kbd-shadows: 17 24 39;
-  --tw-prose-code: #1f2937;
-  --tw-prose-pre-code: #1f2937;
-  --tw-prose-pre-bg: #1f2937;
-  --tw-prose-th-borders: #e5e7eb;
-  --tw-prose-td-borders: #e5e7eb;
-  --tw-prose-invert-body: #9ca3af;
-  --tw-prose-invert-headings: #fff;
-  --tw-prose-invert-lead: #d4d4d8;
-  --tw-prose-invert-links: #fff;
-  --tw-prose-invert-bold: #fff;
-  --tw-prose-invert-counters: #d4d4d8;
-  --tw-prose-invert-bullets: #d4d4d8;
-  --tw-prose-invert-hr: #52525b;
-  --tw-prose-invert-quotes: #d4d4d8;
-  --tw-prose-invert-quote-borders: #3f3f46;
-  --tw-prose-invert-captions: #a1a1aa;
-  --tw-prose-invert-kbd: #fff;
-  --tw-prose-invert-kbd-shadows: 255 255 255;
-  --tw-prose-invert-code: #fff;
-  --tw-prose-invert-pre-code: #d4d4d8;
-  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
-  --tw-prose-invert-th-borders: #065f46;
-  --tw-prose-invert-td-borders: #065f46;
-}
-
-.prose-gray :where(img):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-  border-radius: 10px;
-}
-
-.prose-gray :where(.prose a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+.prose-slate :where(.prose a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   border-bottom: 1px dashed #6b7280;
   font-weight: 400;
   text-decoration: none;
 }
 
-.prose-gray :where(h1,h2,h3,h4,h5,h6):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-  font-weight: 500;
+.prose-gray {
+  --tw-prose-body: #374151;
+  --tw-prose-headings: #111827;
+  --tw-prose-lead: #4b5563;
+  --tw-prose-links: #111827;
+  --tw-prose-bold: #111827;
+  --tw-prose-counters: #6b7280;
+  --tw-prose-bullets: #d1d5db;
+  --tw-prose-hr: #e5e7eb;
+  --tw-prose-quotes: #111827;
+  --tw-prose-quote-borders: #e5e7eb;
+  --tw-prose-captions: #6b7280;
+  --tw-prose-kbd: #111827;
+  --tw-prose-kbd-shadows: 17 24 39;
+  --tw-prose-code: #111827;
+  --tw-prose-pre-code: #e5e7eb;
+  --tw-prose-pre-bg: #1f2937;
+  --tw-prose-th-borders: #d1d5db;
+  --tw-prose-td-borders: #e5e7eb;
+  --tw-prose-invert-body: #d1d5db;
+  --tw-prose-invert-headings: #fff;
+  --tw-prose-invert-lead: #9ca3af;
+  --tw-prose-invert-links: #fff;
+  --tw-prose-invert-bold: #fff;
+  --tw-prose-invert-counters: #9ca3af;
+  --tw-prose-invert-bullets: #4b5563;
+  --tw-prose-invert-hr: #374151;
+  --tw-prose-invert-quotes: #f3f4f6;
+  --tw-prose-invert-quote-borders: #374151;
+  --tw-prose-invert-captions: #9ca3af;
+  --tw-prose-invert-kbd: #fff;
+  --tw-prose-invert-kbd-shadows: 255 255 255;
+  --tw-prose-invert-code: #fff;
+  --tw-prose-invert-pre-code: #d1d5db;
+  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+  --tw-prose-invert-th-borders: #4b5563;
+  --tw-prose-invert-td-borders: #374151;
 }
 
 .sr-only {
@@ -1336,9 +1328,9 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.bg-pink-500 {
+.bg-pink-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(236 72 153 / var(--tw-bg-opacity));
+  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
 }
 
 .bg-red-100 {
@@ -1370,12 +1362,8 @@ video {
   fill: #030712;
 }
 
-.fill-pink-500 {
-  fill: #ec4899;
-}
-
-.fill-slate-900 {
-  fill: #0f172a;
+.fill-pink-400 {
+  fill: #f472b6;
 }
 
 .fill-slate-800 {
@@ -1480,6 +1468,16 @@ video {
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
+.text-slate-500 {
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity));
+}
+
+.text-slate-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+
 .text-slate-900 {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
@@ -1488,11 +1486,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-slate-800 {
-  --tw-text-opacity: 1;
-  color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1738,6 +1731,10 @@ nav ul li:not(:last-child):after {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:w-10\/12 {
+    width: 83.333333%;
   }
 
   .md\:w-11\/12 {

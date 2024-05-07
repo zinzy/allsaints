@@ -11,10 +11,10 @@ module.exports = {
       typography: ({ theme }) => ({ 
         default: {
           css: {
-            color: theme('colors.gray'),
+            color: theme('colors.slate'),
           }
         },
-        gray: {
+        slate: {
           css: { 
             'img': {
               borderRadius: '10px'
