@@ -17,7 +17,6 @@
     <div class="mb-10">
         <h2 class="text-slate-800 text-3xl  mb-2 dark:text-white">Next up:</h2>
     </div>
-    {{ $events := where .Site.RegularPages "Section" "events" }}
 
 <ul>
     {{ range first 3 (where .Site.RegularPages "Section" "events").Reverse }}
