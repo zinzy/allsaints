@@ -1,5 +1,6 @@
 {{ define "main" }}
 
+
 <section class="my-20">
     <div class="text-gray-600 dark:text-gray-400 mt-7 mb-0 text-lg">
         <p class="mb-2">We are an inclusive and affirming fellowship of English speakers – expats, Dutch locals, and tourists – who appreciate a time of thoughtful, reflective worship.</p>
@@ -19,6 +20,7 @@
     </div>
 
 <ul>
+
     {{ range first 3 (where .Site.RegularPages "Section" "events").Reverse }}
      
         <a href="{{ .Permalink }}">
